@@ -73,8 +73,8 @@ return <div>
   <div key={category} className="">
     <h2>{category}</h2>
     <ul className="flex justify-between">
-      {trends[category].map((trend, index) => (
-        <span className="m-2"><a key={index} className="underline cursor-pointer space-y-2 space-x-2" onClick={() => {
+      {trends[category].map((trend) => (
+        <span  key={category+trend} className="m-2"><a className="underline cursor-pointer space-y-2 space-x-2" onClick={() => {
           onSelectTrend(trend)
         }}>{trend}</a>
       </span>))}
